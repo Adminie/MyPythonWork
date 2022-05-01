@@ -1,0 +1,20 @@
+﻿{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+
+{% block title %}聊天机器人{% endblock %}
+
+
+
+{% block page_content %}
+<div class="page-header">
+
+    <h1><img src="static/robot.png" />：{% if name %}{{ name }}{% else %}请说话...{% endif %}</h1>
+
+</div>
+
+{{ wtf.quick_form(form) }}
+
+{% endblock %}
